@@ -7,7 +7,9 @@ echo "Nombre del script: $0"
 echo "Número de argumentos: $#"
 
 # Imprimir el primer y segundo argumento en la misma línea
-echo "Primer argumento: $1   Segundo argumento: $2"
+if [ "$#" -ge 1 ]; then
+    echo "Primer argumento: $1   Segundo argumento: $2"
+fi
 
 # Verificar si hay más de dos argumentos
 if [ $# -gt 2 ]; then
